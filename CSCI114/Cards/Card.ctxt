@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Card
+comment0.text=\n\ Represents\ one\ single\ playing\ card\n\n\ @author\ Shana\ Moore\n\ @version\ April\ 20,\ 2018\n
+comment1.params=rank\ suit
+comment1.target=Card(int,\ int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Card\n\ \n\ Must\ print\ an\ appropriate\ error\ message\ and\ \n\ exit\ the\ program\ if\ the\ rank,\ suit\ are\ not\ valid.\n
+comment2.params=
+comment2.target=int\ getRank()
+comment2.text=\n\ Returns\ rank\ value\n\n\ @return\ \ \ \ rank\n
+comment3.params=
+comment3.target=int\ getSuit()
+comment3.text=\n\ Returns\ suit\ value\n\n\ @return\ \ \ \ suit\n
+comment4.params=rank
+comment4.target=boolean\ validRank(int)
+comment4.text=\n\ A\ boolean\ method\ to\ validate\ rank\n\n\ @param\ \ \ \ \ rank\n\ @return\ \ \ \ True\ or\ False\n
+comment5.params=suit
+comment5.target=boolean\ validSuit(int)
+comment5.text=\n\ A\ boolean\ method\ to\ validate\ suit\n\n\ @param\ \ \ \ \ suit\n\ @return\ \ \ \ True\ or\ False\n
+comment6.params=rank\ suit
+comment6.target=void\ toString(int,\ int)
+comment6.text=\n\ A\ method\ that\ nicely\ formats\ a\ card\n\n\ @param\ \ \ \ \ int\ rank,\ int\ suit\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+numComments=7

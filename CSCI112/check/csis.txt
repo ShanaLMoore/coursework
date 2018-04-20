@@ -1,0 +1,60 @@
+Transaction     Deposit     Check     Balance
+-----------     -------     -----     -------
+Check                        1.00      -1.00
+Check                        3.00      -4.00
+Check                        5.00      -9.00
+Check                        5.00     -14.00
+Check                       58.00     -72.00
+Check                        7.00     -79.00
+Check                        1.00     -80.00
+Check                        7.00     -87.00
+Check                        6.00     -93.00
+Check                        9.00    -102.00
+Check                        8.00    -110.00
+Check                        6.00    -116.00
+Check                        0.00    -116.00
+Check                        4.00    -120.00
+Check                        2.00    -122.00
+Check                        8.00    -130.00
+Check                       14.00    -144.00
+Check                       97.00    -241.00
+Check                       88.00    -329.00
+Check                        5.00    -334.00
+Check                        0.00    -334.00
+Check                        1.00    -335.00
+Check                        2.00    -337.00
+Check                       88.00    -425.00
+Check                        0.00    -425.00
+Check                        6.00    -431.00
+Check                        1.00    -432.00
+Check                        4.00    -436.00
+Check                        1.00    -437.00
+Check                        0.00    -437.00
+Check                        1.00    -438.00
+Check                        6.00    -444.00
+Check                        8.00    -452.00
+Check                        4.00    -456.00
+Check                        7.00    -463.00
+Check                        2.00    -465.00
+Check                        4.00    -469.00
+Check                        4.00    -473.00
+Check                        5.00    -478.00
+Check                        5.00    -483.00
+Check                        3.00    -486.00
+Check                        2.00    -488.00
+Check                        0.00    -488.00
+Check                        7.00    -495.00
+Check                        5.00    -500.00
+
+Summary 
+---------------------------------------------
+Total number deposits: 0
+Total amount deposits: 0.00
+
+Total number checks: 45
+Total amount checks: 500.00
+
+Total service charge: 222.70
+
+Opening balance: 0.00
+Closing balance: -722.70
