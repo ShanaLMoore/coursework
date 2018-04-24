@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Hand
+comment0.text=\n\ Represents\ a\ hand\ of\ 5\ cards.\ \ A\ new\ hand\ always\ starts\ empty,\ then\ cards\ are\ dealt\ from\ the\ deck\ which\ are\ added\ to\ the\ hand.\n\n\ @author\ Shana\ Moore\n\ @version\ April\ 22,\ 20182018\n
+comment1.params=
+comment1.target=Hand()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Hand\n
+comment2.params=c
+comment2.target=void\ addCard(Card)
+comment2.text=\n\ Add\ a\ card\ to\ the\ end\ of\ the\ hand.\n\n\ @param\ \ c\ \ a\ card\ to\ be\ added\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\n\ A\ method\ that\ returns\ string\ representations\n\n\ @return\ \ \ string\ representation\ of\ cards\n
+numComments=4

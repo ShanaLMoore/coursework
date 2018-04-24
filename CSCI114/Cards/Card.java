@@ -1,3 +1,5 @@
+//import libraries
+import java.lang.String;
 
 /**
  * Represents one single playing card
@@ -11,7 +13,11 @@ public class Card
     private final int rank;
     private final int suit;
     
-    // Declare Constants - RANKS
+    //Declare constants
+    private static final String[] SUIT = {"Clubs","Diamonds", "Hearts", "Spades"};
+    private static final String[] RANK = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};  
+    
+    // Declare types of ranks
     public static final int TWO = 2;
     public static final int THREE = 3;
     public static final int FOUR = 4;
@@ -26,12 +32,12 @@ public class Card
     public static final int KING = 13;
     public static final int ACE = 14;
     
-    // Declare Constants - SUITS
+    // Declare types of suits
     public static final int CLUBS = 0;
     public static final int DIAMONDS = 1;
     public static final int HEARTS = 2;
     public static final int SPADES = 3;
-    
+
 
     /**
      * Constructor for objects of class Card
@@ -41,14 +47,14 @@ public class Card
      */
     public Card(int rank, int suit)
     {
-        // validate rank
-        validRank(rank);
-        // validate suit
-        validSuit(suit);
-        
         this.rank = rank;
         this.suit = suit;
-
+        
+        // validate rank and suit
+        if (validRank(rank) == false || validSuit(suit) == false) {
+            System.out.println("ERROR: Invalid input");
+            System.exit(0);
+        }
     }
 
     /**
@@ -96,85 +102,18 @@ public class Card
     }
 
     /**
-     * A method that converts rank to string representation
-     *
-     * @param     rank
-     * @return    rank character
-     */
-    /**public static String rankToString(int rank)
-    {
-        // return approriate characters for rank
-        switch (rank) {
-        case TWO:
-            return "2";
-        case THREE:
-            return "3";
-        case FOUR:
-            return "4";
-        case FIVE:
-            return "5";
-        case SIX:
-            return "6";
-        case SEVEN:
-            return "7";
-        case EIGHT:
-            return "8";
-        case NINE:
-            return "9";
-        case TEN:
-            return "10";
-        case JACK:
-            return "J";
-        case QUEEN:
-            return "Q";
-        case KING:
-            return "K";
-        case ACE:
-            return "A";
-        default:
-            //Handle an illegal argument
-            return null;
-        } 
-    }
-
-    /**
-     * A method that converts suit to string representation
-     *
-     * @param     suit
-     * @return    suit character
-     */
-    /**public static String suitToString(int suit)
-    {
-        // return special characters for suit
-        switch(suit){
-        case CLUBS: 
-            return "♣";
-        case DIAMONDS:
-            return "♦";
-        case HEARTS: 
-            return "♥";
-        case SPADES:
-            return "♠";
-        default:
-            //Handle an illegal argument
-            return null;
-        }
-    } */
-
-
-    /**
      * A method that nicely formats a card
      *
      * @param     int rank, int suit
-     * @return    the sum of x and y
      */
-    public void toString(int rank, int suit)
+    
+    //TODO: fix rank bug
+    public String toString()
     {
         // variable to hold special character
         String out = "";
 
         // Use unicode character codes to get the single special character for suit
-        
         if(suit == CLUBS)
             out += '\u2663';    // Unicode char for black club
         else if(suit == DIAMONDS)
@@ -184,8 +123,11 @@ public class Card
         else if(suit == SPADES)
             out += '\u2660';    // black spade
         
-        // put your code here
-        System.out.printf("rank %d, suit %d is '%d%s' ", rank, suit,  out);
+        // nicely formatted output of a card
+        //System.out.printf("rank %d, suit %d is \"%2s%s\" ", rank, suit, RANK[rank-2], out);
+        //return getRank() + out;
+        return String.format("%2s%1s", RANK[rank-2], out);
+        //"rank " + rank + ", suit " + suit + " is " + RANK[rank-2] + out;
     }
 
 }
