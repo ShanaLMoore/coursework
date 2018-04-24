@@ -13,7 +13,7 @@ public class Deck
     // declare instance variables
     private ArrayList<Card> cards;
 
-    //Declare constants
+    // declare constants
     private static final String[] RANKS = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};  
     private static final String[] SUITS = {"Clubs","Diamonds", "Hearts", "Spades"};
     
@@ -47,6 +47,7 @@ public class Deck
         Random rand = new Random();
         Card temp; 
         
+        // implement random method to shuffle cards
         for(int i = 0; i < cards.size(); i++){
             index_1 = rand.nextInt(cards.size()-1);
             index_2 = rand.nextInt(cards.size()-1);
@@ -61,14 +62,15 @@ public class Deck
      * Deals a card from the top of the deck.  Must remove and return 
      * the card at index 0, reducing the size of the deck.
      *
-     *Must print an appropriate error message and exit the program if
-     *the deck is empty.
+     * Must print an appropriate error message and exit the program if
+     * the deck is empty.
      * @return    card from the top of the deck
      */
     public Card dealCard()
     {
+        // handle empty deck error
         if (cards.size() == 0)
-            System.out.println("ERROR: The deck is empty");
+            System.out.println("In Deck::dealCard() -- deck is empty");
             
         // remove first card from cards array list
           return cards.remove(0);
@@ -82,20 +84,20 @@ public class Deck
      * @return    string representation of a deck
      */
     
-    //TODO: fix bug once dealCard() is called
     public String toString()
     {
         StringBuilder sb = new StringBuilder();
         int k = 0; 
         // print shuffled deck
-        for (int i = 0; i < SUITS.length; i++) {
-            
-            for (int j = 1; j <= RANKS.length; j++){
-                sb.append(cards.get(k++) + " ");
-            } 
-            sb.append("\n");
+        for(int i = 0; i < (SUITS.length*RANKS.length); i++){
+            while(k < cards.size()){
+                sb.append(cards.get(k++).toString());
+                if(k%13 == 0){
+                    sb.append("\n");
+                }
+            }
         }
-
+        
         return sb.toString();
     }
 

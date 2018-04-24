@@ -1,8 +1,6 @@
 //import libraries
 import java.util.ArrayList;
 import java.util.Scanner;
-//import java.util.Collections;
-
 
 /**
  * A DealHands class controls everything and runs your classes
@@ -39,7 +37,6 @@ public class DealHands
 
         /* one card must be dealt from the deck to each hand in turn
         until all players have 5 cards */
-
         for(int i = 0; i <= 4; i++){
             for(int j = 0; j < hand.size(); j++){
                Card currentCard = deck.dealCard();
@@ -48,24 +45,31 @@ public class DealHands
         }
         
         // print each hand
-        System.out.println(hand.toString());
-        
+        for(Hand h: hand){
+            System.out.println(h.toString() + "\n");
+        }
+ 
         // print what remains in the deck, nicely labelled
-        System.out.println("Remaining cards:\n");
-        System.out.println(deck);
-        //deck.toString();
+        System.out.println("What remains:\n");
+        System.out.println(deck.toString() + "\n");
         
         // test error handling, nicely labelled
-        
+        System.out.println("Test error handling:\n");
         
         /* try to create a bad card.  (Comment out your System.exit() 
         method calls, so that the program keeps running after this…)*/
-        Card badCard = new Card(60,80);
+        new Card(15,-1);        
         
         /* write a loop that deliberately tries to deal a card from 
-        the deck after it has been emptied*/
+        the deck after it has been emptied*/        
         for (int x = 52; x >= 0; x--){
             deck.dealCard();
-        }
+        }        
+        
+        
+
+        
+
+
     }
 }

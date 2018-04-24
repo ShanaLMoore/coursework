@@ -42,7 +42,7 @@ public class Hand
      */
     public String toString()
     {
-        // No special formatting is required
+        // no special formatting is required
         return cards.toString();
 
     }
