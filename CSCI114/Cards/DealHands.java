@@ -16,7 +16,7 @@ public class DealHands
         System.out.println("A brand new, fresh deck:\n");
         System.out.println(deck.toString());
         
-        // shuffle the deck then prit it out, nicely labelled
+        // shuffle the deck then print it out, nicely labelled
         deck.shuffle();
         System.out.println("Shuffled:\n");
         System.out.println(deck.toString());
@@ -29,23 +29,24 @@ public class DealHands
         
         /* create a new array list object named hands and add this many 
         empty hand objects*/
-        ArrayList<Hand> hand = new ArrayList<Hand>();
+        ArrayList<Hand> hands = new ArrayList<Hand>();
         
         for(int i = 0; i < players; i++){
-            hand.add(new Hand());
+            hands.add(new Hand());
         }   
 
         /* one card must be dealt from the deck to each hand in turn
         until all players have 5 cards */
+        
         for(int i = 0; i <= 4; i++){
-            for(int j = 0; j < hand.size(); j++){
+            for(int j = 0; j < hands.size(); j++){
                Card currentCard = deck.dealCard();
-               hand.get(j).addCard(currentCard);
+               hands.get(j).addCard(currentCard);
             }
         }
         
         // print each hand
-        for(Hand h: hand){
+        for(Hand h: hands){
             System.out.println(h.toString() + "\n");
         }
  
@@ -62,14 +63,15 @@ public class DealHands
         
         /* write a loop that deliberately tries to deal a card from 
         the deck after it has been emptied*/        
-        for (int x = 52; x >= 0; x--){
-            deck.dealCard();
-        }        
         
+        try {
+            for (int x = 52; x >= 0; x--){
+                deck.dealCard();
+            }    
+        } // catch error
+        catch (Exception e){
+            System.out.println("Can't deal from an empty deck error successfully thrown");
+        }
         
-
-        
-
-
     }
 }

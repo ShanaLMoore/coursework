@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Savings
+comment0.text=\n\ Savings\ is\ an\ Account\ that\ deposits/withdrawals\ money\ from\ a\ savings\ account/\n\ Inherits\ from\ Account\n\ \n\ @author\ Shana\ Moore\n\ @version\ May\ 04,\ 2018\n
+comment1.params=ID\ startingBalance
+comment1.target=Savings(java.lang.String,\ double)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Savings\n
+comment2.params=
+comment2.target=boolean\ active()
+comment2.text=\n\ active()\ -\ \ a\ boolean\ variable\ that\ maintains\ the\ status\ of\ the\ savings\ account\n\n\ @return\ \ \ \ true\ if\ account's\ balance\ is\ greater\ than\ $250.00,\ otherwise\ false\n
+comment3.params=amount
+comment3.target=void\ wd(double)
+comment3.text=\n\ wd()\ -\ call\ Account\ wd()\ to\ do\ the\ withdrawal\n\n\ @param\ \ double\ amount\ \ the\ withdraw\ amount\ in\ dollars\n
+comment4.params=amount
+comment4.target=void\ dep(double)
+comment4.text=\n\ dep()\ -\ call\ Account\ dep()\ to\ do\ the\ deposit\n\n\ @param\ \ double\ amount\ \ the\ deposit\ amount\ in\ dollars\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\n\ toString()\ -\ override\ superclass\ method\ to\ return\ a\ String\ that\ represents\ the\ Savings\ object,\ \n\ must\ be\ in\ standardized\ formatting\n\n\ @return\ \ \ \ e.g.\ "Savings[ID\=456,\ balance\=300.0,\ deposits\=1,\ withdrawals\=1,\ service\=8.0][active\=false]"\n
+numComments=6

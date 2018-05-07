@@ -115,20 +115,32 @@ public class Card
     public String toString()
     {
         // variable to hold special character
-        String out = "";
+        String suitSymbol = "";
 
         // use unicode character codes to get the single special character for suit
         if(suit == CLUBS)
-            out += '\u2663';    // Unicode char for black club
+            suitSymbol += '\u2663';    // Unicode char for black club
         else if(suit == DIAMONDS)
-            out += '\u2662';    // white diamond.  Closest to red
+            suitSymbol += '\u2662';    // white diamond.  Closest to red
         else if(suit == HEARTS)
-            out += '\u2661';    // white heart
+            suitSymbol += '\u2661';    // white heart
         else if(suit == SPADES)
-            out += '\u2660';    // black spade
+            suitSymbol += '\u2660';    // black spade
+            
+        String rankString = Integer.toString(rank);
+        switch (rank){
+            case 11: rankString = "J";
+            break;
+            case 12: rankString = "Q";
+            break;
+            case 13: rankString = "K";
+            break;
+            case 14: rankString = "A";
+            break;
+        }
         
         // nicely format string output of a card
-        return String.format("%2s%1s", getRank(), out);
+        return String.format("%2s%1s", rankString, suitSymbol);
     }
 
 }
