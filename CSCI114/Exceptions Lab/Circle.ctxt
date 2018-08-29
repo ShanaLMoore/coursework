@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Circle
+comment0.text=\n\ Represents\ circles.\ \ A\ circle\ is-a\ shape.\n\n\ @author\ Shana\ Moore\n\ @version\ 5/14/2018\n
+comment1.params=color\ filled\ radius
+comment1.target=Circle(java.lang.String,\ boolean,\ double)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Circle\n
+comment2.params=
+comment2.target=double\ area()
+comment2.text=\n\ area()\ -\ calculates\ the\ area\ of\ a\ circle.\ Overrides\ parent\ method.\ \n\n\ @return\ \ \ \ the\ calculated\ area\ of\ a\ circle\n
+comment3.params=
+comment3.target=double\ perimeter()
+comment3.text=\n\ perimeter()\ -\ calculates\ the\ perimeter\ of\ a\ circle.\ Overrides\ parent\ method.\n\n\ @return\ \ \ \ the\ calulated\ perimeter\ of\ a\ circle\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ toString()\ -\ returns\ nicely\ formatted\ string\ representation\ of\ a\ circle\ object\n\n\ @return\ \ \ \ string\ format\ of\ a\ circle\n
+numComments=5

@@ -17,8 +17,8 @@ public class Account
     private double service; // maintain the total monthly service charges incurred here, in dollars
     
     // declare constants
-    private static final double SERVICE_CHARGE_FEE = 1;
-    private static final double WITHDRAWAL_FEE = 1;
+    private static final double SERVICE_CHARGE_FEE = 1.0;
+    private static final double WITHDRAWAL_FEE = 1.0;
 
     /**
      * Constructor for objects of class Account

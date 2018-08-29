@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Shape
+comment0.text=\n\ Implement\ a\ Circle,\ Triangle,\ and\ Rectangle\ class\n\ which\ extend\ the\ class\ Shape.\n\ \n\ All\ shapes\ must\ have\ a\ color\ and\ are\ either\ filled\ or\ not.\ \n\ All\ shapes\ must\ calculate\ and\ return\ their\ perimeter\ and\ area.\n\n\ ABSTRACT\ CLASS\ RULES\:\ \n\ -\ instance\ variables\ and\ methods,\ like\ a\ normal\ superclass\n\ -\ 'abstract\ methods'\ \=\ no\ implementation\ allowed,\ have\ to\ be\ implemented\ in\ all\ subclasses.\n\ \n\ @author\ Shana\ Moore\n\ @version\ 5/14/2018\n
+comment1.params=
+comment1.target=double\ area()
+comment2.params=
+comment2.target=double\ perimeter()
+comment3.params=color\ filled
+comment3.target=Shape(java.lang.String,\ boolean)
+comment3.text=\n\ Constructor\ for\ objects\ of\ class\ Shape\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ toString()\ -\ returns\ nicely\ formatted\ string\ representation\ of\ an\ object\n\n\ @return\ \ \ \ string\ format\ of\ an\ object\n
+numComments=5

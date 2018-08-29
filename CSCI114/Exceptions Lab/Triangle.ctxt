@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Triangle
+comment0.text=\n\ Represents\ triangles.\ \ A\ triangle\ is-a\ shape.\n\n\ @author\ Shana\ Moore\n\ @version\ 5/14/2018\n
+comment1.params=color\ filled\ side1\ side2\ side3
+comment1.target=Triangle(java.lang.String,\ boolean,\ double,\ double,\ double)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Triangle\n
+comment2.params=
+comment2.target=double\ area()
+comment2.text=\n\ area()\ -\ calculates\ the\ area\ of\ a\ triangle.\ Overrides\ parent\ method.\ \n\n\ @return\ \ \ \ the\ calculated\ area\ of\ a\ triangle\n
+comment3.params=
+comment3.target=double\ perimeter()
+comment3.text=\n\ perimeter()\ -\ calculates\ the\ perimeter\ of\ a\ triangle.\ Overrides\ parent\ method.\n\n\ @return\ \ \ \ the\ sum\ of\ side1\ +\ side2\ +\ side3\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ toString()\ -\ returns\ nicely\ formatted\ string\ representation\ of\ a\ triangle\ object\n\n\ @return\ \ \ \ string\ format\ of\ a\ triangle\n
+numComments=5

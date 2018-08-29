@@ -1,0 +1,12 @@
+white
+true
+3.0
+2.5
+2.0
+red
+true
+2.0
+4.0
+yellow
+false
+1.0

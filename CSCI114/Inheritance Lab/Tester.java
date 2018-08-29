@@ -11,6 +11,8 @@ public class Tester
     public static void main(String arg[])
     {
         // create some bank accounts
+       
+        
         ArrayList<Account> accounts = new ArrayList<>();
 
         Account personal = new Account("987", 200.0);

@@ -1,0 +1,6 @@
+Transactions
+Savings ID 654: Withdrawal not allowed
+
+Print bank accounts
+Account[ID=987, balance=22.0, deposits=1, withdrawals=3, service=8.0]
+Savings[ID=654, balance=400.0, deposits=1, withdrawals=1, service=3.0][active=true]
