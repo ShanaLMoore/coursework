@@ -16,7 +16,7 @@ public class Decimal
     // instance variables - replace the example below with your own
     private PrintWriter pw;
     private int input, num;
-    private String binaryString = "", hexaDeciString = "";
+    private String binaryString, hexaDeciString;
     
     /**
      * Constructor for objects of class Decimal
@@ -25,6 +25,8 @@ public class Decimal
     {
         // initialise instance variables
         this.pw = pw;
+        binaryString = "";
+        hexaDeciString = "";
     }
 
     /**
@@ -100,7 +102,7 @@ public class Decimal
     {
              // char array to store hexadecimal number
         char[] hexaDecimal = new char[100];
-      
+
         // counter for hexadecimal number array
         int i = 0;
         while(num!=0)

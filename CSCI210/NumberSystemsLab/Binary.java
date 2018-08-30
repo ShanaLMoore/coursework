@@ -13,8 +13,8 @@ public class Binary
 {
     // instance variables - replace the example below with your own
     private PrintWriter pw;
-    private String input;
-    private int decimal=0;
+    private String hexaDeciString, input;
+    private int decimal;
     /**
      * Constructor for objects of class Binary
      */
@@ -22,6 +22,9 @@ public class Binary
     {
         // initialise instance variables
         this.pw = pw;
+        decimal = 0;
+        hexaDeciString = "";
+        input = "";
     }
     
     /**
@@ -67,18 +70,26 @@ public class Binary
      */
     private void toDec()
     {
-        // put your code here
-        int p=0; 
-        
+        int length = input.length() - 1;
+        decimal = 0;
+        char[] digits = input.toCharArray();
+        for (char digit : digits) {
+            if (String.valueOf(digit).equals("1")) {
+                decimal += Math.pow(2, length);
+            }
+            --length;
+         }    
+
     }
-    
+
     /**
      * An example of a method - replace this comment with your own
      */
+    
     private void outDec()
     {
         // put your code here
-        System.out.println("The Decimal Integer representation is: " + decNum + "\n");
+        System.out.printf("The Decimal representation is: " + decimal + "\n");
     }
 
     /**
@@ -86,8 +97,16 @@ public class Binary
      */
     private void toHex()
     {
-        // put your code here
-
+        hexaDeciString = "";
+        char[] hex = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A',
+                'B', 'C', 'D', 'E', 'F' };
+        if (input != null && !input.isEmpty()) {
+            toDec();
+            while (decimal > 0) {
+                hexaDeciString = hex[decimal % 16] + hexaDeciString;
+                decimal /= 16;
+            } 
+        }
     }
 
     /**
@@ -96,6 +115,6 @@ public class Binary
     private void outHex()
     {
         // put your code here
-
+        System.out.println("The Hexadecimal representation is: " + hexaDeciString + "\n");
     }
 }
