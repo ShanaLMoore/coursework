@@ -62,6 +62,7 @@ public class Binary
         Scanner reader = new Scanner(System.in);
         
         this.input = reader.nextLine();
+        this.input = input.replaceAll("\\s",""); // remove white spaces 
 
     }
 
@@ -107,6 +108,18 @@ public class Binary
                 decimal /= 16;
             } 
         }
+        
+        /*StringBuilder hex = new StringBuilder("00000000");
+        
+        for(int i = 0, j = 0; i < input.length(); i += 4, j++){
+            if(input.substring(i, i+4).equals("0000")){
+                hex.setCharAt(j, '0');
+            } else if(input.substring(i, i+4).equals("0001")){
+                hex.setCharAt(j, '1');
+            }
+
+        }
+        System.out.println(hex); */
     }
 
     /**

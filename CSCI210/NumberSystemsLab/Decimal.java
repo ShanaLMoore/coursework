@@ -1,6 +1,6 @@
 //import libraries
-import java.util.Scanner;
-import java.io.*;
+import java.util.*; // for Scanner, IOException
+import java.io.*; // for PrintWriter
 
 /**
  * Converts a decimal integer into a 32-bit binary number,
@@ -15,7 +15,7 @@ public class Decimal
 {
     // instance variables - replace the example below with your own
     private PrintWriter pw;
-    private int input, num;
+    private int input, num = 0;
     private String binaryString, hexaDeciString;
     
     /**
@@ -25,8 +25,6 @@ public class Decimal
     {
         // initialise instance variables
         this.pw = pw;
-        binaryString = "";
-        hexaDeciString = "";
     }
 
     /**
@@ -53,7 +51,7 @@ public class Decimal
      * An example of a method - replace this comment with your own
      */
     private void inputDec()
-    {
+    {    
         // put your code here
         System.out.println("Enter the integer you would like to convert:\n");
         
@@ -76,14 +74,27 @@ public class Decimal
     private void toBin()
     {
         // put your code here
-         int a, index = 0;
-
-         //int binary[] = new int[40];
-         while(num > 0){
-             a = num%2;
-             binaryString = binaryString + "" + a;
-             num = num/2;
+         String str = ""; 
+         String val = "4";
+         binaryString = "";
+         
+         for(int n = 0; n < 8; n++)
+         {
+             if(num % 2 == 1)
+             {
+                 str = "1" + str;
+             }
+             
+             if(num % 2 == 0)
+             {
+                 str = "0" + str;
+             }
+             
+             num = num / 2;
          }
+         
+         binaryString = str.replaceAll("(.{" + val + "})", "$1 ").trim();
+
     }
 
     /**
@@ -102,7 +113,7 @@ public class Decimal
     {
              // char array to store hexadecimal number
         char[] hexaDecimal = new char[100];
-
+        hexaDeciString = "";
         // counter for hexadecimal number array
         int i = 0;
         while(num!=0)
