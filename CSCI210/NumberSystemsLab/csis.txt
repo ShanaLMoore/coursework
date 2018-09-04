@@ -1,0 +1,26 @@
+Welcome to the Number Systems Lab!
+ Please  enter a number to select a conversion type:
+
+1: Converts a decimal integer into a 32-bit binary number
+2: Converts a decimal integer into an 8-digit hexadecimal number
+3: Converts a 32-bit binary number into a decimal integer
+4: Converts a 32-bit binary number into an 8-digit hexadecimal number
+5: Converts an 8-digit hexadecimal number into a decimal number
+6: Converts an 8-digit hexadecimal number in a 32-bit binary number
+7: Exit Program
+Enter the integer you would like to convert:
+
+Invalid input. Please enter a decimal integer.
+User Input: 0
+The Binary represenation is: 0000 0000 0000 0000 0000 0000 0000 0000
+
+Welcome to the Number Systems Lab!
+ Please  enter a number to select a conversion type:
+
+1: Converts a decimal integer into a 32-bit binary number
+2: Converts a decimal integer into an 8-digit hexadecimal number
+3: Converts a 32-bit binary number into a decimal integer
+4: Converts a 32-bit binary number into an 8-digit hexadecimal number
+5: Converts an 8-digit hexadecimal number into a decimal number
+6: Converts an 8-digit hexadecimal number in a 32-bit binary number
+7: Exit Program

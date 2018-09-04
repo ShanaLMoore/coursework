@@ -2,11 +2,15 @@
 import java.io.*;
 
 /**
- * Write a description of class Driver here.
- *
- * @author  Shana Moore
- * @PID     011780377
- * @version 8/23/2018
+ * Required class: no change to the code are allowed.
+ * 
+ * Project Title: Number Systems Lab
+ * Project Description: An object-oriented Java program that performs number conversions.
+ * Version or Date: 09/04/2018
+ * How to Start the Project: Run Main() from the Driver class.
+ * Author: Shana Moore
+ * Palomar ID: 011780377
+ * User Instructions:
  */
 public class Driver
 {

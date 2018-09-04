@@ -6,12 +6,13 @@ import java.io.*;
  * Converts an 8-digit hexadecimal number into a decimal integer,
  * or a 32-bit binary number
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author  Shana Moore
+ * @PID     011780377
+ * @version 8/23/2018
  */
 public class Hexadecimal
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private PrintWriter pw;
     private String input, binaryString;
     public int decimal;
@@ -26,86 +27,103 @@ public class Hexadecimal
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Method containing method calls for user input, conversion
+     * and output of a hexadecimal integers to decimal representation
      *
      */
     public void hexToDec()
     {
-        // put your code here
         inputHex();
         toDec();
         outDec();
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * Method containing method calls for user input, conversion
+     * and output of a hexadecimal integers to binary representation
      *
      */
     public void hexToBin()
     {
-        // put your code here
         inputHex();
         toBin();
         outBin();
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Retrieves user input
      *
      */
     private void inputHex()
     {
-        // put your code here
+        // output to file
         System.out.println("Enter the 8-digit hexadecimal that " + 
         "you would like to convert:\n");
+        
+        // output to csis.txt file
+        pw.println("Enter the 8-digit hexadecimal that " + 
+        "you would like to convert:\n");        
         
         // read user input
         Scanner reader = new Scanner(System.in);
         
+        // normalize user input
         this.input = reader.nextLine().toUpperCase();
+        pw.println("User Input: " + input);
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Converts hexadecimal to decimal integer
      *
      */
     private void toDec()
     {
         String digits = "0123456789ABCDEF";
+        // normalize user input
         input = input.toUpperCase();
         decimal = 0;
+        
+        // loop through user input 
         for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
+            char c = input.charAt(i); 
+            // map index to character
             int d = digits.indexOf(c);
+            // hexadecimal is a base 16 number system
             decimal = 16*decimal + d;
         }  
 
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Outputs string to console and file to display decimal conversion
      *
      */
     private void outDec()
     {
-        // put your code here
-        System.out.println("The Decimal represenation is: " + decimal + "\n");
+       // output to console
+       System.out.println("The Decimal represenation is: "
+       + decimal + "\n");
+        
+       // output to csis.txt file 
+       pw.println("The Decimal represenation is: "
+       + decimal + "\n");        
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Converts hexadecimal to binary number
      *
      */
     private void toBin()
     {
-    String str = "";
     String binVal; // the binary value of the Hex
+    String str = "";
     binaryString = "";
-    int val = 4;
+
     
     for (int i = 0; i < input.length(); i++) {
         char hexChar = input.charAt(i);
-
+        
+        // switch statement for hexadecimal to binary conversion
         switch (hexChar) {
             case ('0'):
                 binVal = "0000";
@@ -161,18 +179,24 @@ public class Hexadecimal
         }
          str += binVal;
     }
-    
+    // include space separating nibbles
+    int val = 4;    
     binaryString = str.replaceAll("(.{" + val + "})", "$1 ").trim();
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Outputs string to console and file to display binary conversion
      *
      */
     public void outBin()
     {
-        // put your code here
-        System.out.println("The Binary represenation is: " + binaryString + "\n");
+        // output to console
+        System.out.println("The Binary represenation is: "
+        + binaryString + "\n");
+        
+        // output to csis.txt file       
+        pw.println("The Binary represenation is: "
+        + binaryString + "\n");
     }
 }
 

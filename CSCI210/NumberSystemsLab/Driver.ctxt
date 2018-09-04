@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Driver
-comment0.text=\n\ Write\ a\ description\ of\ class\ Driver\ here.\n\n\ @author\ \ Shana\ Moore\n\ @PID\ \ \ \ \ 011780377\n\ @version\ 8/23/2018\n
+comment0.text=\n\ Required\ class\:\ no\ change\ to\ the\ code\ are\ allowed.\n\ \n\ Project\ Title\:\ Number\ Systems\ Lab\n\ Project\ Description\:\ An\ object-oriented\ Java\ program\ that\ performs\ number\ conversions.\n\ Version\ or\ Date\:\ 09/04/2018\n\ How\ to\ Start\ the\ Project\:\ Run\ Main()\ from\ the\ Driver\ class.\n\ Author\:\ Shana\ Moore\n\ Palomar\ ID\:\ 011780377\n\ User\ Instructions\:\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 numComments=2

@@ -13,7 +13,7 @@ import java.io.*; // for PrintWriter
 
 public class Decimal
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private PrintWriter pw;
     private int input, num = 0;
     private String binaryString, hexaDeciString;
@@ -28,7 +28,8 @@ public class Decimal
     }
 
     /**
-     * Convert decimal to binary 
+     * Method containing method calls for user input, conversion
+     * and output of a decimal integers to binary representation
      */
     public void decToBin()
     {
@@ -38,7 +39,8 @@ public class Decimal
     }
     
     /**
-     * Convert decimal to hexadecimal 
+     * Method containing method calls for user input, conversion
+     * and output of a decimal integers to hexadecimal representation
      */
     public void decToHex()
     {
@@ -48,37 +50,48 @@ public class Decimal
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * Retrieves user input
      */
     private void inputDec()
     {    
-        // put your code here
+        // output to console
         System.out.println("Enter the integer you would like to convert:\n");
+
+        // output to csis.txt file
+        pw.println("Enter the integer you would like to convert:\n");
         
         // read user input
         Scanner reader = new Scanner(System.in);
         
-        this.input = reader.nextInt();
-        
-        if (input <= 1) {
-            System.out.println("Error: Not a positive number");
-            return;
+        try 
+        {
+          this.input = reader.nextInt();         
         }
+        catch(InputMismatchException exception)
+        {
+            // print error messages if input is not an integer
+            System.out.println("Invalid input. Please enter a decimal integer.");
+            pw.println("Invalid input. Please enter a decimal integer.");
+            System.exit(0);
+        }           
         
-        this.num = input;
+        if(input >= 0 )
+        {
+            this.num = input;
+            pw.println("User Input: " + input);
+        }
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Converts decimal integer to binary number
      */
     private void toBin()
     {
-        // put your code here
          String str = ""; 
          String val = "4";
          binaryString = "";
          
-         for(int n = 0; n < 8; n++)
+         for(int n = 0; n < 32; n++)
          {
              if(num % 2 == 1)
              {
@@ -93,25 +106,32 @@ public class Decimal
              num = num / 2;
          }
          
+         // include space separating nibbles
          binaryString = str.replaceAll("(.{" + val + "})", "$1 ").trim();
 
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Outputs string to console and file to display binary
+     * conversion
      */
     private void outBin()
     {
-        // put your code here
-        System.out.println("The Binary represenation is: " + binaryString + "\n");
+        // output to console
+        System.out.println("The Binary represenation is: "
+        + binaryString + "\n");
+        
+        // output to csis.txt file
+        pw.println("The Binary represenation is: "
+        + binaryString + "\n");
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Converts decimal integer to hexadecimal
      */
     private void toHex()
     {
-             // char array to store hexadecimal number
+        // char array to store hexadecimal number
         char[] hexaDecimal = new char[100];
         hexaDeciString = "";
         // counter for hexadecimal number array
@@ -119,20 +139,20 @@ public class Decimal
         while(num!=0)
         {   
             // temporary variable to store remainder
-            int temp  = 0;
+            int remainder  = 0;
           
-            // storing remainder in temp variable.
-            temp = num % 16;
+            // storing remainder in temporary variable.
+            remainder = num % 16;
           
-            // check if temp < 10
-            if(temp < 10)
+            // check if remainder < 10
+            if(remainder < 10)
             {
-                hexaDecimal[i] = (char)(temp + 48);
+                hexaDecimal[i] = (char)(remainder + 48);
                 i++;
             }
             else
             {
-                hexaDecimal[i] = (char)(temp + 55);
+                hexaDecimal[i] = (char)(remainder + 55);
                 i++;
             }
           
@@ -145,12 +165,17 @@ public class Decimal
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Outputs string to console and file to display hexadecimal
+     * conversion
      */
     private void outHex()
     {
-        // put your code here
+        // output to console
         System.out.println("The HexaDecimal represenation is: "
+        + hexaDeciString + "\n");
+        
+        // output to csis.txt file
+        pw.println("The HexaDecimal represenation is: "
         + hexaDeciString + "\n");
     }
 
